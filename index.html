@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Cricket Match Scoreboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="team" id="team1">
+        <h2>Kanguva</h2>
+        <ul class="player-list">
+            <li data-player="vivek">Vivek <span id="vivek-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="ponz">Ponz <span id="ponz-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="manoj">Manoj <span id="manoj-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="srini">Srini <span id="srini-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="kavi">Kavi <span id="kavi-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="girish">Girish <span id="girish-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="ram">Ram <span id="ram-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="gokul">Gokul <span id="gokul-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="aswin">Aswin <span id="aswin-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="prajosh">Prajosh <span id="prajosh-score" ondblclick="editScore(event)">0</span></li>
+        </ul>
+        <div class="score-board" id="team1-score">
+            <h3>Score: 0/0</h3>
+            <p>Overs: 0.0</p>
+        </div>
+        <div class="controls">
+            <button onclick="addRuns(1, 'team1')">1</button>
+            <button onclick="addRuns(2, 'team1')">2</button>
+            <button onclick="addRuns(4, 'team1')">4</button>
+            <button onclick="addRuns(6, 'team1')">6</button>
+            <button onclick="nextBall('team1')">Next Ball</button>
+            <button onclick="toggleExtras('team1')">Extras</button>
+            <button onclick="playerOut('team1')">Wicket</button>
+            <button onclick="resetWicket('team1')">Reset Wicket</button>
+        </div>
+        <div class="extras-tab" id="team1-extras">
+            <button onclick="addExtras('lb', 'team1')">LB</button>
+            <button onclick="addExtras('wd', 'team1')">WD</button>
+            <button onclick="addExtras('nb', 'team1')">NB</button>
+            <button onclick="addExtras('b', 'team1')">B</button>
+        </div>
+        <div class="history-controls">
+            <button onclick="undo('team1')">Undo</button>
+            <button onclick="redo('team1')">Redo</button>
+        </div>
+    </div>
+
+    <div class="team" id="team2">
+        <h2>Indian 2</h2>
+        <ul class="player-list">
+            <li data-player="santhosh">Santhosh <span id="santhosh-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="vicky">Vicky <span id="vicky-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="praveen">Praveen <span id="praveen-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="sathya">Sathya <span id="sathya-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="abdul">Abdul <span id="abdul-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="sandeep">Sandeep <span id="sandeep-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="bala">Bala <span id="bala-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="karthik">Karthik <span id="karthik-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="monish">Monish <span id="monish-score" ondblclick="editScore(event)">0</span></li>
+            <li data-player="vishnu">Vishnu <span id="vishnu-score" ondblclick="editScore(event)">0</span></li>
+        </ul>
+        <div class="score-board" id="team2-score">
+            <h3>Score: 0/0</h3>
+            <p>Overs: 0.0</p>
+        </div>
+        <div class="controls">
+            <button onclick="addRuns(1, 'team2')">1</button>
+            <button onclick="addRuns(2, 'team2')">2</button>
+            <button onclick="addRuns(4, 'team2')">4</button>
+            <button onclick="addRuns(6, 'team2')">6</button>
+            <button onclick="nextBall('team2')">Next Ball</button>
+            <button onclick="toggleExtras('team2')">Extras</button>
+            <button onclick="playerOut('team2')">Wicket</button>
+            <button onclick="resetWicket('team2')">Reset Wicket</button>
+        </div>
+        <div class="extras-tab" id="team2-extras">
+            <button onclick="addExtras('lb', 'team2')">LB</button>
+            <button onclick="addExtras('wd', 'team2')">WD</button>
+            <button onclick="addExtras('nb', 'team2')">NB</button>
+            <button onclick="addExtras('b', 'team2')">B</button>
+        </div>
+        <div class="history-controls">
+            <button onclick="undo('team2')">Undo</button>
+            <button onclick="redo('team2')">Redo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

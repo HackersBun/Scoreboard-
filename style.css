@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.team {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 30%;
+    box-shadow: 2px 2px 12px #aaa;
+}
+
+.player-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.player-list li {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.player-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.player-list li.selected {
+    background-color: #f0f0f0;
+}
+
+.player-list li.out {
+    color: red;
+}
+
+.score-board {
+    margin-top: 20px;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.extras-tab {
+    margin-top: 20px;
+    display: none;
+}
+
+.extras-tab.active {
+    display: block;
+}
+
+.history-controls {
+    margin-top: 10px;
+}
